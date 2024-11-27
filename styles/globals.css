@@ -1,3 +1,11 @@
+/* globals.css */
 body {
+	margin: 0;
 	font-family: Arial, sans-serif;
+}
+
+@media (max-width: 768px) {
+	.forecast-card {
+		width: 80px;
+	}
 }

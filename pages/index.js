@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getWeatherData } from '../api/weather';
+import Navbar from '../components/Navbar';
 import WeatherDisplay from '../components/WeatherDisplay';
 
 export default function Home() {
@@ -14,6 +15,9 @@ export default function Home() {
 	}, []);
 
 	return (
-		<div>{weatherData ? <WeatherDisplay weatherData={weatherData} /> : <p>Loading...</p>}</div>
+		<div>
+			<Navbar />
+			{weatherData ? <WeatherDisplay weatherData={weatherData} /> : <p>Loading...</p>}
+		</div>
 	);
 }
